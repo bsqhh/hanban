@@ -7,6 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface FlightDao extends JpaRepository<Flight, Integer> {
-    //List<Flight> findByCategoryTypeIn(List<Integer> categoryTypeList);
+public interface FlightDao extends JpaRepository<Flight,Long> {
+    List<Flight> findAllById(List<Long> categoryTypeList);
+
+    void deleteById(Long Id);
+
+
+
 }
