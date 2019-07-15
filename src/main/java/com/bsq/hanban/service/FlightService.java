@@ -14,5 +14,8 @@ public interface FlightService {
     //查询机票信息
     List<Flight> findAll();
 
+    List<Flight> findAllById(List<Long> categoryTypeList);
+
+    void deleteById(Long Id);
 
 }
